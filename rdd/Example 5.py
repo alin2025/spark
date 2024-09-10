@@ -6,7 +6,7 @@ sc = SparkContext.getOrCreate()
 
 # Read a text file
 text = sc\
-    .textFile(r"/tmp/pycharm_project_574/05_spark/spark_RDD/melville-moby_dick.txt")
+    .textFile(r"melville-moby_dick.txt")
 
 # We wish to clean all the non-letter characters using map(), so we write an auxiliary function called clean_word.
 def clean_word(s):
@@ -37,7 +37,7 @@ word_count = word_count\
 
 # Read Stop words file and changed it to key,value RDD
 stop_words = sc\
-    .textFile(r"/tmp/pycharm_project_574/05_spark/spark_RDD/english stop words.txt")\
+    .textFile(r"english stop words.txt")\
     .map(lambda word: (word, 1))
 # print(stop_words.take(10))
 

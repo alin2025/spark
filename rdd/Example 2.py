@@ -6,7 +6,7 @@ sc = SparkContext.getOrCreate()
 
 # Read a text file
 text = sc\
-    .textFile(r"/tmp/pycharm_project_574/05_spark/spark_RDD/melville-moby_dick.txt")
+    .textFile(r"melville-moby_dick.txt")
 print(text.take(30))
 
 # We wish to clean all the non-letter characters using map(),

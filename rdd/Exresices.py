@@ -12,7 +12,7 @@ sc = SparkContext.getOrCreate()
 
 # Read a text file
 text = sc\
-    .textFile(r"/tmp/pycharm_project_574/05_spark/spark_RDD/english words.txt")
+    .textFile(r"english words.txt")
 
 print(text.take(10))
 
