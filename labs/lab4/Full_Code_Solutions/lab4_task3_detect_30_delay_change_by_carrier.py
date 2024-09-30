@@ -11,7 +11,7 @@ spark = SparkSession \
 
 sliding_range_window = Window.partitionBy(F.col('Carrier')).orderBy(F.col('start_range'))
 
-flights_df = spark.read.parquet('hdfs://course-hdfs:8020/data/transformed/flights/')
+flights_df = spark.read.parquet('s3a://spark/data/transformed/flights/')
 
 flights_df.cache()
 
